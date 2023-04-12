@@ -1,4 +1,5 @@
 @import "~normalize.css";
+@import "./styles";
 
 html {
   box-sizing: border-box;
@@ -47,4 +48,18 @@ h5,
 h6,
 p {
   margin: 0;
+}
+
+.app {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  min-height: 100vh;
+  background: linear-gradient($radial-gradient);
+}
+
+.container {
+  width: 100%;
+  max-width: $breakpoint-xxl;
+  padding: 1.5rem;
 }
