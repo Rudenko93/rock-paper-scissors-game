@@ -1,7 +1,5 @@
-import "./App.scss"
-
 function App() {
-  return <div className="App"></div>
+  return <div className="App">git init</div>
 }
 
 export default App
