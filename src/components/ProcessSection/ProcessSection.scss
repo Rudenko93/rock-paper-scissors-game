@@ -1,0 +1,23 @@
+@import "../../styles";
+
+.process-section {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  position: relative;
+
+  .play-item-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .box-desc {
+    position: absolute;
+    top: 7rem;
+
+    color: white;
+
+    text-transform: uppercase;
+  }
+}

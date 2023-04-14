@@ -1,7 +1,5 @@
 @mixin btn($gradient) {
   background: linear-gradient(white, white) padding-box,
     linear-gradient(to bottom, $gradient) border-box;
-  border-radius: 50%;
-  border: 0.5rem solid transparent;
-  box-shadow: 0 3px rgba(10, 10, 10, 0.15) inset;
+  @extend %border-shadow;
 }
