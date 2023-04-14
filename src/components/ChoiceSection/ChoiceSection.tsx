@@ -2,7 +2,13 @@ import { PlayElement } from "../PlayElement"
 import { playElements } from "../../playElements"
 import "./ChoiceSection.scss"
 
-export const ChoiceSection = () => {
+interface IChoiceSectionProps {
+  handleClickPlayer: any
+}
+
+export const ChoiceSection: React.FC<IChoiceSectionProps> = ({
+  handleClickPlayer,
+}) => {
   return (
     <div className="choice-section">
       <img
@@ -11,8 +17,14 @@ export const ChoiceSection = () => {
         alt="pentagon"
       />
       <div className="play-elements">
-        {playElements.map((elem) => (
-          <PlayElement name={elem.name} src={elem.url} key={elem.name} />
+        {playElements.map((elem, index) => (
+          <PlayElement
+            name={elem.name}
+            src={elem.url}
+            key={elem.name}
+            handleClickPlayer={handleClickPlayer}
+            index={index}
+          />
         ))}
       </div>
     </div>

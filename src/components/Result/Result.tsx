@@ -1,10 +1,16 @@
 import "./Result.scss"
 
-export const Result = () => {
+interface IResultProps {
+  handleClickStart: any
+}
+
+export const Result: React.FC<IResultProps> = ({ handleClickStart }) => {
   return (
     <div className="result">
       <h1>you win</h1>
-      <button className="result-btn">play again</button>
+      <button className="result-btn" onClick={handleClickStart}>
+        play again
+      </button>
     </div>
   )
 }
