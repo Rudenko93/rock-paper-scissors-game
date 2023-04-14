@@ -1,0 +1,49 @@
+@import "../../styles";
+
+.play-btn {
+  display: flex;
+  justify-content: center;
+
+  width: 5rem;
+  height: 5rem;
+
+  background-color: white;
+  transform: scale(1.1);
+
+  &.scissors {
+    @include btn($scissors-gradient);
+    transform: translateX(10rem) translateY(-2rem);
+    &:hover {
+      cursor: pointer;
+      transform: translateX(10rem) translateY(-2rem) $scale;
+    }
+  }
+
+  &.spock {
+    @include btn($spock-gradient);
+    transform: translateX(-2rem) translateY(3rem);
+  }
+
+  &.paper {
+    @include btn($paper-gradient);
+    transform: translateX(7rem) translateY(3rem);
+  }
+
+  &.lizard {
+    @include btn($lizard-gradient);
+    transform: translateX(-9rem) translateY(11rem);
+  }
+
+  &.rock {
+    @include btn($rock-gradient);
+    transform: translateX(-6rem) translateY(11rem);
+  }
+
+  img {
+    align-self: center;
+    width: 1.8rem;
+
+    color: white;
+    background-color: white;
+  }
+}

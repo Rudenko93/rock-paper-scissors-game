@@ -1,0 +1,21 @@
+@import "../../styles";
+
+.rules {
+  display: flex;
+  justify-content: center;
+
+  .rules-btn {
+    min-width: 8rem;
+
+    color: hsl(225, 10%, 92%);
+    font-size: $font-size-btn;
+    font-weight: $semi-bold;
+    text-transform: uppercase;
+    background-color: transparent;
+
+    padding: 0.5rem;
+
+    border: 3px $header-outline solid;
+    border-radius: 6px;
+  }
+}

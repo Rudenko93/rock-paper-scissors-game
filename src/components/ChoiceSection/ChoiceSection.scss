@@ -1,0 +1,18 @@
+@import "../../styles";
+
+.choice-section {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+
+  .choice-section-bg {
+    position: absolute;
+    align-self: center;
+    width: 15rem;
+  }
+
+  .play-elements {
+    display: flex;
+    align-self: center;
+  }
+}

@@ -28,8 +28,13 @@ header {
 
     color: $dark-text;
     font-weight: $bold;
-  }
-  .count {
-    font-size: $font-size-score;
+
+    span {
+      color: $score-text;
+    }
+
+    .count {
+      font-size: $font-size-score;
+    }
   }
 }
