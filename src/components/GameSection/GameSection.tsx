@@ -1,31 +1,22 @@
-import { useState, useEffect } from "react"
+import { useState } from "react"
 
 import { ChoiceSection } from "../ChoiceSection"
-import { playElements } from "../../playElements"
-import "./GameSection.scss"
 import { ProcessSection } from "../ProcessSection"
 import { Result } from "../Result"
-import { getRandomInt } from "../../helpers/getRandomInt"
 
-export const GameSection: React.FC = () => {
+import "./GameSection.scss"
+
+export const GameSection: React.FC<any> = ({ setCount }) => {
   const [gameStart, setGameStart] = useState(false)
   const [player, setPlayer] = useState(0)
-  const [house, setHouse] = useState(0)
-  const [emptyHouse, setEmptyHouse] = useState(true)
+  const [result, setResult] = useState<"victory" | "lose" | "draw">("draw")
+  const [showResult, setShowResult] = useState(false)
 
   const handleClickPlayer = (player: number) => {
     setPlayer(player)
     setGameStart(true)
-    setHouse(getRandomInt())
+    setShowResult(false)
   }
-
-  useEffect(() => {
-    const interval = setTimeout(() => {
-      setEmptyHouse(false)
-    }, 2000)
-
-    return () => clearTimeout(interval)
-  }, [gameStart])
 
   const handleClickStart = () => {
     setGameStart(false)
@@ -38,11 +29,17 @@ export const GameSection: React.FC = () => {
       return (
         <>
           <ProcessSection
-            player={playElements[player]}
-            house={playElements[house]}
-            emptyHouse={emptyHouse}
+            player={player}
+            setResult={setResult}
+            setCount={setCount}
+            showResult={showResult}
+            setShowResult={setShowResult}
           />
-          <Result handleClickStart={handleClickStart} />
+          <Result
+            handleClickStart={handleClickStart}
+            result={result}
+            showResult={showResult}
+          />
         </>
       )
     }

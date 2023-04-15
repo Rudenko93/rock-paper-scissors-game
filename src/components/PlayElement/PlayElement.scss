@@ -21,12 +21,12 @@
 
   &.spock {
     @include btn($spock-gradient);
-    transform: translateX(-2rem) translateY(3rem);
+    transform: translateX(-16rem) translateY(3rem);
   }
 
   &.paper {
     @include btn($paper-gradient);
-    transform: translateX(7rem) translateY(3rem);
+    transform: translateX(11rem) translateY(3rem);
   }
 
   &.lizard {
@@ -36,7 +36,7 @@
 
   &.rock {
     @include btn($rock-gradient);
-    transform: translateX(-6rem) translateY(11rem);
+    transform: translateX(4rem) translateY(11rem);
   }
 
   //ProcessSection position
