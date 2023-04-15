@@ -30,21 +30,11 @@ export const ProcessSection: React.FC<any> = ({
       setShowResult(true)
     }, 2000)
     return () => clearTimeout(interval)
-  }, [playElements])
+  }, [player, setCount, setResult, setShowResult])
 
   const render = () => {
     if (!showResult) {
-      return (
-        <button
-          style={{
-            width: "5rem",
-            height: "5rem",
-            border: "none",
-            borderRadius: "50%",
-            backgroundColor: "rgb(24, 32, 60)",
-            scale: "1.1",
-          }}></button>
-      )
+      return <button className="empty-btn"></button>
     } else {
       return (
         <PlayElement

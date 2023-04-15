@@ -17,3 +17,13 @@
     align-self: center;
   }
 }
+
+@include tablet {
+  .choice-section {
+    margin-bottom: 5rem;
+
+    .choice-section-bg {
+      width: 20rem;
+    }
+  }
+}

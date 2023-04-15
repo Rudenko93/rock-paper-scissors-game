@@ -8,7 +8,6 @@
   height: 5rem;
 
   background-color: white;
-  transform: scale(1.1);
 
   &.scissors {
     @include btn($scissors-gradient);
@@ -22,35 +21,55 @@
   &.spock {
     @include btn($spock-gradient);
     transform: translateX(-16rem) translateY(3rem);
+    &:hover {
+      cursor: pointer;
+      transform: translateX(-16rem) translateY(3rem) $scale;
+    }
   }
 
   &.paper {
     @include btn($paper-gradient);
     transform: translateX(11rem) translateY(3rem);
+    &:hover {
+      cursor: pointer;
+      transform: translateX(11rem) translateY(3rem) $scale;
+    }
   }
 
   &.lizard {
     @include btn($lizard-gradient);
     transform: translateX(-9rem) translateY(11rem);
+    &:hover {
+      cursor: pointer;
+      transform: translateX(-9rem) translateY(11rem) $scale;
+    }
   }
 
   &.rock {
     @include btn($rock-gradient);
     transform: translateX(4rem) translateY(11rem);
+    &:hover {
+      cursor: pointer;
+      transform: translateX(4rem) translateY(11rem) $scale;
+    }
   }
 
   //ProcessSection position
   &.player {
     transform: translateX(0) translateY(0) scale(1.4);
+    &:hover {
+      cursor: pointer;
+      transform: translateX(0) translateY(0) scale(1.4);
+    }
   }
 
   &.house {
     transform: translateX(0) translateY(0) scale(1.4);
+    &:hover {
+      cursor: pointer;
+      transform: translateX(0) translateY(0) scale(1.4);
+    }
   }
-
-  // &.empty {
-  //   @include btn-empty($rock-gradient);
-  // }
 
   img {
     align-self: center;
@@ -58,5 +77,79 @@
 
     color: white;
     background-color: white;
+  }
+}
+
+@include tablet {
+  .play-btn {
+    width: 7rem;
+    height: 7rem;
+
+    &.scissors {
+      @include btn($scissors-gradient);
+      transform: translateX(13rem) translateY(-2rem);
+      &:hover {
+        cursor: pointer;
+        transform: translateX(13rem) translateY(-2rem) $scale;
+      }
+    }
+
+    &.spock {
+      @include btn($spock-gradient);
+      transform: translateX(-5rem) translateY(5rem);
+      &:hover {
+        cursor: pointer;
+        transform: translateX(-5rem) translateY(5rem) $scale;
+      }
+    }
+
+    &.paper {
+      @include btn($paper-gradient);
+      transform: translateX(11rem) translateY(14rem);
+      &:hover {
+        cursor: pointer;
+        transform: translateX(11rem) translateY(14rem) $scale;
+      }
+    }
+
+    &.lizard {
+      @include btn($lizard-gradient);
+      transform: translateX(-12rem) translateY(14rem);
+      &:hover {
+        cursor: pointer;
+        transform: translateX(-12rem) translateY(14rem) $scale;
+      }
+    }
+
+    &.rock {
+      @include btn($rock-gradient);
+      transform: translateX(-8rem) translateY(5rem);
+      &:hover {
+        cursor: pointer;
+        transform: translateX(-8rem) translateY(5rem) $scale;
+      }
+    }
+
+    &.player {
+      transform: translateX(0) translateY(0) scale(1.6);
+      &:hover {
+        cursor: pointer;
+        transform: translateX(0) translateY(0) scale(1.6);
+      }
+    }
+
+    //ProcessSection position
+
+    &.house {
+      transform: translateX(0) translateY(0) scale(1.6);
+      &:hover {
+        cursor: pointer;
+        transform: translateX(0) translateY(0) scale(1.6);
+      }
+    }
+
+    img {
+      width: 1.8rem * 1.2;
+    }
   }
 }

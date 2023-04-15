@@ -32,3 +32,17 @@
     border-radius: 6px;
   }
 }
+
+@include tablet {
+  .result {
+    h1 {
+      font-size: $font-size-h1 * 1.2;
+    }
+
+    .result-btn {
+      min-width: 16rem;
+      font-size: $font-size-btn * 1.2;
+      padding: 0.5rem;
+    }
+  }
+}

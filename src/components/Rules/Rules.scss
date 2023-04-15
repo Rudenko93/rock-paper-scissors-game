@@ -7,6 +7,8 @@
   margin-top: 5rem;
 
   .rules-btn {
+    position: absolute;
+    bottom: 3rem;
     min-width: 8rem;
 
     color: hsl(225, 10%, 92%);
@@ -19,5 +21,50 @@
 
     border: 3px $header-outline solid;
     border-radius: 6px;
+  }
+}
+
+.modal {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  top: 0;
+  left: 0;
+  background-color: #fff;
+  width: 100vw;
+  height: 100vh;
+
+  h1 {
+    color: $dark-text;
+    font-size: $font-size-text;
+    text-transform: uppercase;
+    margin: 3.5rem auto;
+  }
+
+  .close-btn {
+    position: absolute;
+    bottom: 3rem;
+    border: none;
+    background-color: transparent;
+    img {
+      width: 30px;
+    }
+  }
+}
+
+@include tablet {
+  .rules {
+    .rules-btn {
+      right: 10rem;
+      min-width: 10rem;
+      font-size: $font-size-btn * 1.2;
+    }
+  }
+
+  .modal {
+    h1 {
+      font-size: $font-size-text * 1.2;
+    }
   }
 }

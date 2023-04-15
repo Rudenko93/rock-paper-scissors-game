@@ -10,6 +10,13 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    .empty-btn {
+      width: 5rem;
+      height: 5rem;
+      border-radius: 50%;
+      border: none;
+      background-color: rgb(24, 32, 60);
+    }
   }
 
   .box-desc {
@@ -19,5 +26,22 @@
     color: white;
 
     text-transform: uppercase;
+
+    margin-top: 1rem;
+  }
+}
+
+@include tablet {
+  .process-section {
+    .play-item-box {
+      .empty-btn {
+        width: 7rem;
+        height: 7rem;
+      }
+    }
+    .box-desc {
+      top: 9rem;
+      font-size: $font-size-btn;
+    }
   }
 }

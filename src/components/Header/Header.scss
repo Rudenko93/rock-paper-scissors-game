@@ -30,11 +30,35 @@ header {
     font-weight: $bold;
 
     span {
+      font-size: $font-size-btn;
       color: $score-text;
     }
 
     .count {
       font-size: $font-size-score;
+    }
+  }
+}
+
+@include tablet {
+  header {
+    .logo {
+      margin: 1.2rem;
+      width: 4.5rem;
+      height: 5.5rem;
+    }
+    .score {
+      width: 8rem;
+      margin: 1rem;
+      padding: 1rem;
+
+      span {
+        font-size: $font-size-btn * 1.2;
+      }
+
+      .count {
+        font-size: $font-size-score * 1.2;
+      }
     }
   }
 }

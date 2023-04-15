@@ -15,10 +15,17 @@ export const PlayElement: React.FC<IPlayElementProps> = ({
   handleClickPlayer,
   index,
 }) => {
+  const onClick = () => {
+    if (index === 0 || index) {
+      handleClickPlayer(index)
+    } else {
+      return
+    }
+  }
   return (
     <button
       className={`play-btn ${name} ${direction}`}
-      onClick={() => handleClickPlayer(index)}>
+      onClick={() => onClick()}>
       <img src={src} alt={name} />
     </button>
   )
