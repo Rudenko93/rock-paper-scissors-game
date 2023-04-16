@@ -87,54 +87,46 @@
 
     &.scissors {
       @include btn($scissors-gradient);
-      transform: translateX(13rem) translateY(-2rem);
+      transform: translateX(14rem) translateY(-2rem);
       &:hover {
         cursor: pointer;
-        transform: translateX(13rem) translateY(-2rem) $scale;
+        transform: translateX(14rem) translateY(-2rem) $scale;
       }
     }
 
     &.spock {
       @include btn($spock-gradient);
-      transform: translateX(-5rem) translateY(5rem);
+      transform: translateX(-24rem) translateY(5rem);
       &:hover {
         cursor: pointer;
-        transform: translateX(-5rem) translateY(5rem) $scale;
+        transform: translateX(-24rem) translateY(5rem) $scale;
       }
     }
 
     &.paper {
       @include btn($paper-gradient);
-      transform: translateX(11rem) translateY(14rem);
+      transform: translateX(16rem) translateY(5rem);
       &:hover {
         cursor: pointer;
-        transform: translateX(11rem) translateY(14rem) $scale;
+        transform: translateX(16rem) translateY(5rem) $scale;
       }
     }
 
     &.lizard {
       @include btn($lizard-gradient);
-      transform: translateX(-12rem) translateY(14rem);
+      transform: translateX(-13rem) translateY(14rem);
       &:hover {
         cursor: pointer;
-        transform: translateX(-12rem) translateY(14rem) $scale;
+        transform: translateX(-13rem) translateY(14rem) $scale;
       }
     }
 
     &.rock {
       @include btn($rock-gradient);
-      transform: translateX(-8rem) translateY(5rem);
+      transform: translateX(6rem) translateY(14rem);
       &:hover {
         cursor: pointer;
-        transform: translateX(-8rem) translateY(5rem) $scale;
-      }
-    }
-
-    &.player {
-      transform: translateX(0) translateY(0) scale(1.6);
-      &:hover {
-        cursor: pointer;
-        transform: translateX(0) translateY(0) scale(1.6);
+        transform: translateX(6rem) translateY(14rem) $scale;
       }
     }
 
