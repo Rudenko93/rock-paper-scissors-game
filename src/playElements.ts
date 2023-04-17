@@ -1,4 +1,4 @@
-export const playElements: Array<Record<string, string>> = [
+export const playElements = [
   {
     name: "scissors",
     url: "./images/icon-scissors.svg",
@@ -19,4 +19,4 @@ export const playElements: Array<Record<string, string>> = [
     name: "spock",
     url: "./images/icon-spock.svg",
   },
-]
+] as const

@@ -132,6 +132,14 @@
 
     //ProcessSection position
 
+    &.player {
+      transform: translateX(0) translateY(0) scale(1.6);
+      &:hover {
+        cursor: pointer;
+        transform: translateX(0) translateY(0) scale(1.6);
+      }
+    }
+
     &.house {
       transform: translateX(0) translateY(0) scale(1.6);
       &:hover {

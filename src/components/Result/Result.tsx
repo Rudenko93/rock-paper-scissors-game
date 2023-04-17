@@ -1,7 +1,7 @@
 import "./Result.scss"
 
 interface IResultProps {
-  handleClickStart: any
+  handleClickStart: () => void
   result: "victory" | "lose" | "draw"
   showResult: boolean
 }
@@ -10,7 +10,7 @@ export const Result: React.FC<IResultProps> = ({
   handleClickStart,
   result,
   showResult,
-}) => {
+}): JSX.Element => {
   const render = () => {
     if (!showResult) {
       return

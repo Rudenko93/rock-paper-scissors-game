@@ -6,11 +6,17 @@ import { Result } from "../Result"
 
 import "./GameSection.scss"
 
-export const GameSection: React.FC<any> = ({ setCount }) => {
-  const [gameStart, setGameStart] = useState(false)
-  const [player, setPlayer] = useState(0)
+interface IGameSection {
+  setCount: React.Dispatch<React.SetStateAction<number>>
+}
+
+export const GameSection: React.FC<IGameSection> = ({
+  setCount,
+}): JSX.Element => {
+  const [gameStart, setGameStart] = useState<boolean>(false)
+  const [player, setPlayer] = useState<number>(0)
   const [result, setResult] = useState<"victory" | "lose" | "draw">("draw")
-  const [showResult, setShowResult] = useState(false)
+  const [showResult, setShowResult] = useState<boolean>(false)
 
   const handleClickPlayer = (player: number) => {
     setPlayer(player)
@@ -22,7 +28,7 @@ export const GameSection: React.FC<any> = ({ setCount }) => {
     setGameStart(false)
   }
 
-  const render = () => {
+  const render = (): JSX.Element => {
     if (!gameStart) {
       return <ChoiceSection handleClickPlayer={handleClickPlayer} />
     } else {

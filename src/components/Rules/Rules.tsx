@@ -1,10 +1,11 @@
 import { useState } from "react"
 import "./Rules.scss"
 
-export const Rules: React.FC = () => {
-  const [showRules, setShowRules] = useState(false)
+export const Rules: React.FC = (): JSX.Element => {
+  const [showRules, setShowRules] = useState<boolean>(false)
 
-  const render = () => {
+  const render = (): JSX.Element | undefined => {
+    if (!showRules) return
     if (showRules)
       return (
         <div className="modal">

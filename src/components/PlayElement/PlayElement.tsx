@@ -4,7 +4,7 @@ interface IPlayElementProps {
   name: string
   src: string
   direction?: "null" | "player" | "house"
-  handleClickPlayer?: any
+  handleClickPlayer?: (player: number) => void
   index?: number
 }
 
@@ -15,12 +15,13 @@ export const PlayElement: React.FC<IPlayElementProps> = ({
   handleClickPlayer,
   index,
 }) => {
-  const onClick = () => {
-    if (index === 0 || index) {
-      handleClickPlayer(index)
-    } else {
+  const onClick = (): void => {
+    if (
+      typeof index === "undefined" ||
+      typeof handleClickPlayer === "undefined"
+    )
       return
-    }
+    handleClickPlayer(index)
   }
   return (
     <button

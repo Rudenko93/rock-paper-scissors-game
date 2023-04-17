@@ -3,7 +3,7 @@ import { playElements } from "../../playElements"
 import "./ChoiceSection.scss"
 
 interface IChoiceSectionProps {
-  handleClickPlayer: any
+  handleClickPlayer: (player: number) => void
 }
 
 export const ChoiceSection: React.FC<IChoiceSectionProps> = ({

@@ -1,6 +1,8 @@
 import "./Header.scss"
 
-export const Header: React.FC<Record<string, number>> = ({ count }) => {
+export const Header: React.FC<Record<string, number>> = ({
+  count,
+}): JSX.Element => {
   return (
     <header>
       <img className="logo" src="./images/logo-bonus.svg" alt="" />

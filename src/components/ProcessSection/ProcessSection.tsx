@@ -7,14 +7,22 @@ import { compareForResult } from "../../helpers/compareForResult"
 
 import "./ProcessSection.scss"
 
-export const ProcessSection: React.FC<any> = ({
+interface IProcessSection {
+  player: number
+  setResult: React.Dispatch<React.SetStateAction<"victory" | "lose" | "draw">>
+  setCount: React.Dispatch<React.SetStateAction<number>>
+  showResult: boolean
+  setShowResult: React.Dispatch<React.SetStateAction<boolean>>
+}
+
+export const ProcessSection: React.FC<IProcessSection> = ({
   player,
   setResult,
   setCount,
   showResult,
   setShowResult,
-}) => {
-  const [house, setHouse] = useState(0)
+}): JSX.Element => {
+  const [house, setHouse] = useState<number>(0)
 
   useEffect(() => {
     const interval = setTimeout(() => {
@@ -22,10 +30,13 @@ export const ProcessSection: React.FC<any> = ({
       setHouse(iHouse)
       const result = compareForResult(player, iHouse)
       setResult(result)
-      setCount((count: any) => {
+      setCount((count: number) => {
         if (result === "victory") return (count = count + 1)
         if (result === "lose") return count === 0 ? count : count - 1
         if (result === "draw") return count
+        else {
+          return count
+        }
       })
       setShowResult(true)
     }, 2000)
